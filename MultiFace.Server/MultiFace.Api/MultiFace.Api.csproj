@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MultiFace.BLL\MultiFace.BLL.csproj" />
+    <ProjectReference Include="..\MultiFace.Common\MultiFace.Common.csproj" />
+    <ProjectReference Include="..\MultiFace.DAL\MultiFace.DAL.csproj" />
+  </ItemGroup>
+
+</Project>
