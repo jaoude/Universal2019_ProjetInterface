@@ -1,10 +1,5 @@
 class HttpRequest {
-
-  ClearBox = () => {
-    document.getElementById('data').innerHTML = "";
-   }
-  getData = () => {
-    // create a new XMLHttpRequest
+  getData = (value) => {
     var xhr = new XMLHttpRequest()
     var a = ''
     // get a callback when the server responds
@@ -14,7 +9,7 @@ class HttpRequest {
       console.log(a)
     })
     // open the request with the verb and the url
-    xhr.open('GET', 'https://localhost:44370/api/persons/sql')
+    xhr.open('GET', 'https://localhost:44370/api/persons/' + value)
     // send the request
     xhr.send()
     xhr.onload = function (e) {
@@ -23,19 +18,23 @@ class HttpRequest {
           var json_obj = JSON.parse(xhr.responseText);
           console.log(json_obj)
           document.getElementById('names').innerHTML = "";
-          
-          for(var i = 0; i < json_obj.length; i++)
-          {
+
+          for (var i = 0; i < json_obj.length; i++) {
             var div = document.createElement("div");
-            var p = document.createElement("P"); 
-            var img = document.createElement('img');
-            img.src = 'data:image/jpeg;base64,' + (json_obj[i].photo);
-            p.innerHTML= '<div class="data"><p id="Data"></p>'+ json_obj[i].firstName + " " + json_obj[i].lastName  + "</p></div>";
-            div.appendChild(p);
-            p.appendChild(img);
             document.getElementById('names').appendChild(div);
+            div.innerHTML = 
+            "<div class='row' style='width: 400px;'>" +
+            "<div class='col'>" +
+              "<div class='card' style='width: 300px;'>" +
+                "<div class='card-body'>" +
+                  "<img src=" +
+                  "data:image/jpeg;base64," + (json_obj[i].photo) + "class='card-img-top' alt='...'>" +
+                  " <h5 class='card-title'>" + json_obj[i].firstName + " " + json_obj[i].lastName + "</h5>" +
+                "</div>" +
+              "</div>" +
+            "</div>" +
+          "</div>" 
           }
-       
         } else {
           console.error(xhr.statusText);
         }
@@ -44,9 +43,8 @@ class HttpRequest {
     xhr.onerror = function (e) {
       console.error(xhr.statusText);
     };
-    
   }
 }
-
-
 export default HttpRequest;
+
+

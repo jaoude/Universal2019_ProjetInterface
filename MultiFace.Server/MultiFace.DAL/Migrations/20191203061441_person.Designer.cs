@@ -10,8 +10,8 @@ using MultiFace.DAL.ApplicationDbContext;
 namespace MultiFace.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20191114180710_Person")]
-    partial class Person
+    [Migration("20191203061441_person")]
+    partial class person
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MultiFace.DAL.Migrations
 {
-    public partial class Person : Migration
+    public partial class person : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
