@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiFace.Api", "MultiFace.Api\MultiFace.Api.csproj", "{4C9B0967-B5FB-4AB7-ACF3-483813394132}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiFace.Api", "MultiFace.Api\MultiFace.Api.csproj", "{4C9B0967-B5FB-4AB7-ACF3-483813394132}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiFace.DAL", "MultiFace.DAL\MultiFace.DAL.csproj", "{70B2D775-856F-4A49-AE6A-EE1BE813425E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiFace.DAL", "MultiFace.DAL\MultiFace.DAL.csproj", "{70B2D775-856F-4A49-AE6A-EE1BE813425E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiFace.Common", "MultiFace.Common\MultiFace.Common.csproj", "{8947DFDA-4945-444F-BAA9-9A90BE3CA9EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiFace.Common", "MultiFace.Common\MultiFace.Common.csproj", "{8947DFDA-4945-444F-BAA9-9A90BE3CA9EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiFace.BLL", "MultiFace.BLL\MultiFace.BLL.csproj", "{A1E964EB-BFD9-4316-B819-DE0A7BCD811B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiFace.BLL", "MultiFace.BLL\MultiFace.BLL.csproj", "{A1E964EB-BFD9-4316-B819-DE0A7BCD811B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,6 +2,7 @@
 using MultiFace.BLL.Services;
 using System.Threading;
 using System.Threading.Tasks;
+using static MultiFace.Common.Enum;
 
 namespace MultiFace.Api.Controllers
 {
@@ -9,26 +10,36 @@ namespace MultiFace.Api.Controllers
     [ApiController]
     public class PersonsController : ControllerBase
     {
-        private readonly IPersonService _personService;
-        public PersonsController(IPersonService personService)
+        private readonly IPersonService<PersonServiceSql> _personServiceSql;
+        private readonly IPersonService<PersonServiceCsv> _personServiceCsv;
+        private readonly IPersonService<PersonServiceWeb> _personServiceWeb;
+
+        public PersonsController(IPersonService<PersonServiceSql> personServiceSql, IPersonService<PersonServiceCsv> personServiceCsv,
+            IPersonService<PersonServiceWeb> personServiceWeb)
         {
-            _personService = personService;
+            _personServiceSql = personServiceSql;
+            _personServiceCsv = personServiceCsv;
+            _personServiceWeb = personServiceWeb;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetPersons(CancellationToken ct)
-        {
-            var personsDto = await _personService.GetPersonsAsync(ct);
-            return Ok(personsDto);
-        }
-
 
         [HttpGet]
-        [Route("{id}", Name = "GetPerson")]
-        public async Task<IActionResult> GetPerson(int id, CancellationToken ct)
+        [Route("{requestType}")]
+        public async Task<IActionResult> GetPersons(RequestType requestType,CancellationToken ct)
         {
-            var personDto = await _personService.GetPersonAsync(id, ct);
-            return Ok(personDto);
+            switch (requestType)
+            {
+                
+                case (RequestType.Csv):
+                    return Ok(await _personServiceCsv.GetPersonsAsync(ct));
+                case (RequestType.Web):
+                    return Ok(await _personServiceWeb.GetPersonsAsync(ct));
+                case (RequestType.Sql):
+                default:
+                    return Ok(await _personServiceSql.GetPersonsAsync(ct));
+
+            }
+          
         }
     }
 }
