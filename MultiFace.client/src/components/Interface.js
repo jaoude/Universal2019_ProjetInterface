@@ -1,6 +1,6 @@
 import React from 'react';
 import HttpRequest from '../Service/httprequest';
-import './interface.css';
+//import './interface.css';
 
 class MyButton extends React.Component {
  httpRequest = new HttpRequest();
