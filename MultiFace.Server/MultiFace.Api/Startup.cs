@@ -33,6 +33,7 @@ namespace MultiFace.Api
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IAutoMapperService, AutoMapperService>();
             services.AddTransient<IFileLoader, FileLoaderCsv>();
+            services.AddTransient<IWebServiceLoader, WebServiceLoader>();
 
 
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
