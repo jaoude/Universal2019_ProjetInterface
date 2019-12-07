@@ -88,3 +88,8 @@ button.site:after{
   text-align: center;
 }
 
+.data{
+  display: flex;
+  flex-wrap: wrap;
+}
+

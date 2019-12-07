@@ -189,23 +189,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\g-gui\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\alou4\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\g-gui\\Desktop\\Proj\\ProjetInterface\\MutliFace.WebService\\MutliFace.WebService\\MutliFace.WebService.csproj",
+      "projectUniqueName": "C:\\Users\\alou4\\Desktop\\Projet\\ProjetInterface\\MutliFace.WebService\\MutliFace.WebService\\MutliFace.WebService.csproj",
       "projectName": "MutliFace.WebService",
-      "projectPath": "C:\\Users\\g-gui\\Desktop\\Proj\\ProjetInterface\\MutliFace.WebService\\MutliFace.WebService\\MutliFace.WebService.csproj",
-      "packagesPath": "C:\\Users\\g-gui\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\g-gui\\Desktop\\Proj\\ProjetInterface\\MutliFace.WebService\\MutliFace.WebService\\obj\\",
+      "projectPath": "C:\\Users\\alou4\\Desktop\\Projet\\ProjetInterface\\MutliFace.WebService\\MutliFace.WebService\\MutliFace.WebService.csproj",
+      "packagesPath": "C:\\Users\\alou4\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alou4\\Desktop\\Projet\\ProjetInterface\\MutliFace.WebService\\MutliFace.WebService\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\g-gui\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alou4\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

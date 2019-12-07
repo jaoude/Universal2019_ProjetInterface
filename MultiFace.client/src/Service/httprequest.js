@@ -2,15 +2,11 @@ class HttpRequest {
   getData = (value) => {
     var xhr = new XMLHttpRequest()
     var a = ''
-    // get a callback when the server responds
     xhr.addEventListener('load', () => {
-      // update the state of the component with the result here
       a = xhr.responseText
       console.log(a)
     })
-    // open the request with the verb and the url
     xhr.open('GET', 'https://localhost:44370/api/persons/' + value)
-    // send the request
     xhr.send()
     xhr.onload = function (e) {
       if (xhr.readyState === 4) {
@@ -21,19 +17,15 @@ class HttpRequest {
 
           for (var i = 0; i < json_obj.length; i++) {
             var div = document.createElement("div");
+            div.className = "card";
+            div.style="width: 250px; height: 150px; margin-right: 40px;";
             document.getElementById('names').appendChild(div);
             div.innerHTML = 
-            "<div class='row' style='width: 400px;'>" +
-            "<div class='col'>" +
-              "<div class='card' style='width: 300px;'>" +
-                "<div class='card-body'>" +
+                "<div class='card-body' style='background-color: grey;'>" +   
                   "<img src=" +
                   "data:image/jpeg;base64," + (json_obj[i].photo) + "class='card-img-top' alt='...'>" +
-                  " <h5 class='card-title'>" + json_obj[i].firstName + " " + json_obj[i].lastName + "</h5>" +
-                "</div>" +
-              "</div>" +
-            "</div>" +
-          "</div>" 
+                  " <h5 class='card-title' style='font-family: Impact;'>" + json_obj[i].firstName + " " + json_obj[i].lastName + "</h5>" +
+                "</div>"  
           }
         } else {
           console.error(xhr.statusText);

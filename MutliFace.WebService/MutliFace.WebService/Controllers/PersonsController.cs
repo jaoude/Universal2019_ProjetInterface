@@ -17,7 +17,7 @@ namespace MutliFace.WebService.Controllers
         [HttpGet]
         public IActionResult GetPersons()
         {
-            TextReader reader = new StreamReader(@"C:\Users\g-gui\Documents\ok.csv");
+            TextReader reader = new StreamReader(@"C:\Users\alou4\Documents\Book1.csv");
             var csvReader = new CsvReader(reader);
             var records = csvReader.GetRecords<PersonDto>();
             return Ok(records.ToList());

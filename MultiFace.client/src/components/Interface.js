@@ -5,44 +5,43 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 class MyButton extends React.Component {
 httpRequest = new HttpRequest();
-click = ()=>{
+SQL = ()=>{
     document.getElementById('names').hidden=false;
     this.httpRequest.getData('0');
   }
-ClearBox = () => {
-    document.getElementById('names').innerHTML = "";
-   }
-click1 = ()=>{
+CSV = ()=>{
     document.getElementById('names').hidden=false;
     this.httpRequest.getData('1');
   }
-design = {
-    width: '1800px',
-  };
+WebService = ()=>{
+    document.getElementById('names').hidden=false;
+    this.httpRequest.getData('2');
+  }
+ClearData = () => {
+    document.getElementById('names').innerHTML = "";
+   }
 render() {
   return (     
       <div>
-        <h1 style={ { textAlign: "center" } }>MultiFace</h1>
+        <h1 style={ { textAlign: "center", color: "white", fontFamily: "Comic Sans MS"  } }>MultiFace</h1>
         <hr></hr>
-        <div className="row" style={this.design}>
-          <div className="col">
-            <button  onClick={this.click}>SQL Repository</button>{' '}
+        <div className="row" style={{width: "100%"}}>
+          <div className="col-2">
+            <button  onClick={this.SQL}>SQL Repository</button>{' '}
             <br></br>
             <br></br>
-            <button onClick={this.click1}>CSV Repository</button>{'  '}
+            <button onClick={this.CSV}>CSV Repository</button>{'  '}
             <br></br>
             <br></br>
-            <button>Service Repository</button>{'  '}
+            <button  onClick={this.WebService}>Service Repository</button>{'  '}
             <br></br>
             <br></br>
             <br></br>
             <br></br>
             <br></br>
-            <button onClick={this.ClearBox}>Clear</button>{'  '}
+            <button onClick={this.ClearData}>Clear</button>{'  '}
           </div>
-          <div className="row" id='names' hidden={true}>
-            <div className="col" id="names" hidden ={true}>
-            </div>
+          <div className="col data" id='names' hidden={true}>
           </div>
         </div>   
       </div>
