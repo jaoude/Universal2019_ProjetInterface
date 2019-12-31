@@ -25,8 +25,8 @@ render() {
       <div>
         <h1 style={ { textAlign: "center", color: "white", fontFamily: "Comic Sans MS"  } }>MultiFace</h1>
         <hr></hr>
-        <div className="row" style={{width: "100%"}}>
-          <div className="col-2">
+        <div className="row" style={{width: "110%"}}>
+          <div className="col-2" >
             <button  onClick={this.SQL}>SQL Repository</button>{' '}
             <br></br>
             <br></br>
@@ -37,9 +37,8 @@ render() {
             <br></br>
             <br></br>
             <br></br>
-            <br></br>
-            <br></br>
-            <button onClick={this.ClearData}>Clear</button>{'  '}
+
+            <button id="floatingb" onClick={this.ClearData}>Clear</button>{'  '}
           </div>
           <div className="col data" id='names' hidden={true}>
           </div>

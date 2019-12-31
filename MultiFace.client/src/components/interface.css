@@ -1,13 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
-/* General Buttons */
+
 button {
   width: 230px;
   height: 100px;
-  background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%); /* W3C */
+  background: linear-gradient(to bottom, #4eb5e5 0%,#389ed5 100%);
   border: none;
-  border-radius: 5px;
-  position: relative;
-  border-bottom: 4px solid #2b8bc6;
   color: #fbfbfb;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
@@ -15,13 +12,28 @@ button {
   font-size: 15px;
   text-align: left;
   text-indent: 5px;
-  box-shadow: 0px 3px 0px 0px rgba(0,0,0,.2);
   cursor: pointer;
+  transition: all .15s linear 0s;
+  position: relative;
+  padding: 15px 25px;
+  box-shadow: -6px 6px 0 black;
+  text-decoration: none;
   
-/* Just for presentation */  
-  display: block;
-  margin: 0 ;
-  margin-bottom: 20px;
+
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 blue;
+    
+      top: 1px;
+      left: -2px;
+      width: angle-o;
+      height: angle-o;
+    
+      bottom: -2px;
+      right: 1px;
+      width: angle-o;
+      height: angle-o;
+  
 }
 button:active {
   box-shadow: 0px 2px 0px 0px rgba(0,0,0,.2);
@@ -43,53 +55,10 @@ button:after {
   top: 0;
   border-radius: 0 5px 5px 0;  
 }
-
-/* Button pointing left */
-
-button.back {
-  text-align: right;
-  padding-right: 0px;
-  box-sizing: border-box;
-}
-button.back:after {
-  content: "";
-  width: 0;
-  height: 0;
-  display: block;
-  border-top: 20px solid #187dbc;
-  border-bottom: 20px solid #187dbc;
-  border-right: 16px solid transparent;
-  border-left: 20px solid #187dbc;
-  position: absolute;
-  opacity: 0.6; 
-  left: 0;
-  top: 0;
-  border-radius: 5px 0 0 5px;    
-}
-
-/* Single buttons */
-
-button.site {
-  width: 40px;
-  text-align: center;
-  text-indent: 0;
-}
-button.site:after{
-  display: none;
-}
-
-.holder {
-  width: 600px;
-  background: #efefef;
-  padding: 30px 10px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  margin-top: 20px;  
-  text-align: center;
-}
-
 .data{
   display: flex;
   flex-wrap: wrap;
 }
+
+
 
