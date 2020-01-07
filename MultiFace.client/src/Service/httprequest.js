@@ -1,4 +1,4 @@
-import './Style.css';
+import './style.css';
 class HttpRequest {
   getData = (value) => {
     var xhr = new XMLHttpRequest()

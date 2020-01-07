@@ -16,8 +16,8 @@ namespace MultiFace.BLL.Helpers
         public async Task<IEnumerable<Person>> LoadFileAsync(string filePath, CancellationToken ct)
         {
             TextReader reader = new StreamReader(filePath);
-            var csvReader = new CsvReader(reader);
-            return await Task.Run(() => csvReader.GetRecords<Person>(), ct);
+            var csvReader = new CsvReader(reader);   
+            return await Task.Run(() => csvReader.GetRecords<Person>(), ct);           
         }
     }
 }

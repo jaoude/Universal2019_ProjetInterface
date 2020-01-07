@@ -14,10 +14,16 @@ namespace MultiFace.BLL.Helpers
     {
         public async Task<IEnumerable<PersonDto>> LoadWebServiceAsync(string Path, CancellationToken ct)
         {
-            using var client = new HttpClient();
-            var result = await client.GetAsync(Path,ct);
-            string s = await result.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<IEnumerable<PersonDto>>(s);
+            using (HttpClient client = new HttpClient())
+            {
+                var result = await client.GetAsync(Path, ct);
+                if (result.IsSuccessStatusCode)
+                {
+                    string s = await result.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<IEnumerable<PersonDto>>(s);
+                }
+                else return null;
+            }
         }
     }
 }

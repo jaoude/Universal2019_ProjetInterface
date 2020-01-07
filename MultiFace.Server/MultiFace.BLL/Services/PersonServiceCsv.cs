@@ -24,7 +24,7 @@ namespace MultiFace.BLL.Services
 
         public async Task<IEnumerable<PersonDto>> GetPersonsAsync(CancellationToken ct)
         {
-            IEnumerable<Person> persons = await _fileLoaderCsv.LoadFileAsync(@"C:\Users\alou4\Documents\Book1.csv", ct);
+            IEnumerable<Person> persons = await _fileLoaderCsv.LoadFileAsync("File.csv", ct);
             IEnumerable<PersonDto> personsDto = _mapper.Mapper.Map<IEnumerable<PersonDto>>(persons);
             return personsDto.ToList();
         }
